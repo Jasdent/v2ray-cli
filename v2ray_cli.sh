@@ -1,6 +1,6 @@
 #!/bin/bash
 cur_dir=$(pwd)
-cfg_path=/home/yzk/.config/v2ray
+cfg_path=~/.config/v2ray
 subscription_path=${cfg_path}/subscriptions
 
 cd ${subscription_path}
