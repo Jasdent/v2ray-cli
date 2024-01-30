@@ -1,6 +1,6 @@
 #!/bin/bash
 cur_dir=$(pwd)
-cfg_path=/home/zkyang/.config/v2ray
+cfg_path=/home/yzk/.config/v2ray
 subscription_path=${cfg_path}/subscriptions
 
 cd ${subscription_path}
@@ -21,7 +21,11 @@ done
 
 echo $file
 
-ln -sf ${subscription_path}/"$file" ${cfg_path}/config.json
+cd ..
+
+echo $(pwd)
+
+ln -svf subscriptions/"$file" ${cfg_path}/config.json
 
 systemctl --user restart v2ray.service
 
