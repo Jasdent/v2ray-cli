@@ -4,6 +4,9 @@ cfg_path=~/.config/v2ray
 subscription_path=${cfg_path}/subscriptions
 
 cd ${subscription_path}
+sed -i 's/10086,/20170,/g' ./*.json
+sed -i 's/10087,/20171,/g' ./*.json
+
 
 # Get list of .json files in specified directory
 files=(*.json)
